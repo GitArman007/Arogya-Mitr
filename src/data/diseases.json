@@ -1,0 +1,820 @@
+{
+  "diseases": [
+    {
+      "id": "malaria",
+      "name": "Malaria",
+      "nameHindi": "मलेरिया",
+      "category": "infectious",
+      "symptoms": [
+        "High fever (above 100.4°F)",
+        "Chills and sweating",
+        "Headache",
+        "Nausea and vomiting",
+        "Muscle aches",
+        "Fatigue"
+      ],
+      "symptomsHindi": [
+        "तेज बुखार (100.4°F से अधिक)",
+        "ठंड लगना और पसीना",
+        "सिरदर्द",
+        "मतली और उल्टी",
+        "मांसपेशियों में दर्द",
+        "थकान"
+      ],
+      "prevention": [
+        "Use mosquito nets while sleeping",
+        "Apply mosquito repellent",
+        "Wear long-sleeved clothing",
+        "Remove standing water around your home",
+        "Take anti-malarial medication if prescribed"
+      ],
+      "preventionHindi": [
+        "सोते समय मच्छरदानी का उपयोग करें",
+        "मच्छर भगाने वाली क्रीम लगाएं",
+        "लंबी बाजू के कपड़े पहनें",
+        "घर के आसपास खड़े पानी को हटाएं",
+        "यदि निर्धारित किया गया हो तो मलेरिया-रोधी दवा लें"
+      ],
+      "treatment": [
+        "Rest and stay hydrated",
+        "Take prescribed anti-malarial medication",
+        "Monitor temperature regularly",
+        "Seek immediate medical help if symptoms worsen"
+      ],
+      "treatmentHindi": [
+        "आराम करें और हाइड्रेटेड रहें",
+        "निर्धारित मलेरिया-रोधी दवा लें",
+        "तापमान की नियमित निगरानी करें",
+        "यदि लक्षण बिगड़ते हैं तो तुरंत चिकित्सकीय सहायता लें"
+      ],
+      "emergency": {
+        "immediateAction": "Seek immediate medical attention for high fever with chills",
+        "immediateActionHindi": "तेज बुखार और ठंड के साथ तुरंत चिकित्सकीय सहायता लें",
+        "whatNotToDo": "Do not ignore high fever or delay medical treatment",
+        "whatNotToDoHindi": "तेज बुखार को नजरअंदाज न करें या चिकित्सकीय उपचार में देरी न करें",
+        "redFlags": "Severe dehydration, confusion, seizures, difficulty breathing",
+        "redFlagsHindi": "गंभीर निर्जलीकरण, भ्रम, दौरे, सांस लेने में कठिनाई",
+        "emergencyHelp": "Call 108 ambulance or go to nearest hospital immediately",
+        "emergencyHelpHindi": "108 एम्बुलेंस को कॉल करें या तुरंत निकटतम अस्पताल जाएं"
+      }
+    },
+    {
+      "id": "dengue",
+      "name": "Dengue",
+      "nameHindi": "डेंगू",
+      "category": "infectious",
+      "symptoms": [
+        "High fever (104°F or higher)",
+        "Severe headache",
+        "Pain behind the eyes",
+        "Joint and muscle pain",
+        "Nausea and vomiting",
+        "Skin rash"
+      ],
+      "symptomsHindi": [
+        "तेज बुखार (104°F या अधिक)",
+        "तीव्र सिरदर्द",
+        "आंखों के पीछे दर्द",
+        "जोड़ों और मांसपेशियों में दर्द",
+        "मतली और उल्टी",
+        "त्वचा पर चकत्ते"
+      ],
+      "prevention": [
+        "Eliminate mosquito breeding sites",
+        "Use mosquito nets and repellents",
+        "Wear protective clothing",
+        "Keep water containers covered",
+        "Clean gutters and drains regularly"
+      ],
+      "preventionHindi": [
+        "मच्छरों के प्रजनन स्थलों को समाप्त करें",
+        "मच्छरदानी और रिपेलेंट का उपयोग करें",
+        "सुरक्षात्मक कपड़े पहनें",
+        "पानी के कंटेनरों को ढककर रखें",
+        "नालियों और नालों को नियमित रूप से साफ करें"
+      ],
+      "treatment": [
+        "Rest and drink plenty of fluids",
+        "Take paracetamol for fever (avoid aspirin)",
+        "Monitor platelet count",
+        "Seek medical help if bleeding occurs"
+      ],
+      "treatmentHindi": [
+        "आराम करें और खूब तरल पदार्थ पिएं",
+        "बुखार के लिए पैरासिटामोल लें (एस्पिरिन से बचें)",
+        "प्लेटलेट काउंट की निगरानी करें",
+        "यदि रक्तस्राव हो तो चिकित्सकीय सहायता लें"
+      ],
+      "emergency": {
+        "immediateAction": "Rest, stay hydrated, and monitor for bleeding signs",
+        "immediateActionHindi": "आराम करें, हाइड्रेटेड रहें और रक्तस्राव के संकेतों की निगरानी करें",
+        "whatNotToDo": "Do not take aspirin or NSAIDs, avoid dehydration",
+        "whatNotToDoHindi": "एस्पिरिन या NSAIDs न लें, निर्जलीकरण से बचें",
+        "redFlags": "Severe abdominal pain, persistent vomiting, bleeding from nose/gums",
+        "redFlagsHindi": "गंभीर पेट दर्द, लगातार उल्टी, नाक/मसूड़ों से रक्तस्राव",
+        "emergencyHelp": "Call 108 or visit hospital if severe symptoms appear",
+        "emergencyHelpHindi": "यदि गंभीर लक्षण दिखें तो 108 को कॉल करें या अस्पताल जाएं"
+      }
+    },
+    {
+      "id": "chickenpox",
+      "name": "Chickenpox",
+      "nameHindi": "चेचक",
+      "category": "infectious",
+      "symptoms": [
+        "Itchy, fluid-filled blisters",
+        "Fever and headache",
+        "Loss of appetite",
+        "Fatigue and malaise",
+        "Rash that spreads over body"
+      ],
+      "symptomsHindi": [
+        "खुजली वाले, तरल से भरे छाले",
+        "बुखार और सिरदर्द",
+        "भूख न लगना",
+        "थकान और अस्वस्थता",
+        "शरीर पर फैलने वाला चकत्ता"
+      ],
+      "prevention": [
+        "Get vaccinated (Varicella vaccine)",
+        "Avoid contact with infected persons",
+        "Maintain good hygiene",
+        "Isolate infected individuals"
+      ],
+      "preventionHindi": [
+        "टीका लगवाएं (वेरिसेला वैक्सीन)",
+        "संक्रमित व्यक्तियों के संपर्क से बचें",
+        "अच्छी स्वच्छता बनाए रखें",
+        "संक्रमित व्यक्तियों को अलग रखें"
+      ],
+      "treatment": [
+        "Rest and stay hydrated",
+        "Use calamine lotion for itching",
+        "Take antihistamines for severe itching",
+        "Keep fingernails short to prevent scratching"
+      ],
+      "treatmentHindi": [
+        "आराम करें और हाइड्रेटेड रहें",
+        "खुजली के लिए कैलामाइन लोशन का उपयोग करें",
+        "तीव्र खुजली के लिए एंटीहिस्टामाइन लें",
+        "खरोंचने से रोकने के लिए नाखून छोटे रखें"
+      ],
+      "emergency": {
+        "immediateAction": "Rest, avoid scratching, and keep skin clean",
+        "immediateActionHindi": "आराम करें, खरोंचने से बचें और त्वचा को साफ रखें",
+        "whatNotToDo": "Do not scratch blisters, avoid aspirin in children",
+        "whatNotToDoHindi": "छालों को न खरोंचें, बच्चों में एस्पिरिन से बचें",
+        "redFlags": "High fever, severe headache, breathing difficulty, infected blisters",
+        "redFlagsHindi": "तेज बुखार, गंभीर सिरदर्द, सांस लेने में कठिनाई, संक्रमित छाले",
+        "emergencyHelp": "Call 108 if severe complications arise",
+        "emergencyHelpHindi": "यदि गंभीर जटिलताएं उत्पन्न हों तो 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "chikungunya",
+      "name": "Chikungunya",
+      "nameHindi": "चिकनगुनिया",
+      "category": "infectious",
+      "symptoms": [
+        "High fever (102-104°F)",
+        "Severe joint pain (especially hands, wrists, ankles)",
+        "Muscle pain",
+        "Headache",
+        "Nausea and vomiting",
+        "Rash on trunk and limbs"
+      ],
+      "symptomsHindi": [
+        "तेज बुखार (102-104°F)",
+        "गंभीर जोड़ों में दर्द (विशेषकर हाथ, कलाई, टखने)",
+        "मांसपेशियों में दर्द",
+        "सिरदर्द",
+        "मतली और उल्टी",
+        "धड़ और अंगों पर चकत्ते"
+      ],
+      "prevention": [
+        "Eliminate mosquito breeding sites",
+        "Use mosquito nets and repellents",
+        "Wear long-sleeved clothing",
+        "Keep water containers covered",
+        "Clean gutters and drains regularly"
+      ],
+      "preventionHindi": [
+        "मच्छरों के प्रजनन स्थलों को समाप्त करें",
+        "मच्छरदानी और रिपेलेंट का उपयोग करें",
+        "लंबी बाजू के कपड़े पहनें",
+        "पानी के कंटेनरों को ढककर रखें",
+        "नालियों और नालों को नियमित रूप से साफ करें"
+      ],
+      "treatment": [
+        "Rest and stay hydrated",
+        "Take paracetamol for fever and pain",
+        "Apply cold compresses to joints",
+        "Avoid aspirin and NSAIDs",
+        "Physical therapy for joint pain"
+      ],
+      "treatmentHindi": [
+        "आराम करें और हाइड्रेटेड रहें",
+        "बुखार और दर्द के लिए पैरासिटामोल लें",
+        "जोड़ों पर ठंडी सिकाई करें",
+        "एस्पिरिन और NSAIDs से बचें",
+        "जोड़ों के दर्द के लिए फिजियोथेरेपी"
+      ],
+      "emergency": {
+        "immediateAction": "Rest, stay hydrated, and manage joint pain with cold compresses",
+        "immediateActionHindi": "आराम करें, हाइड्रेटेड रहें और जोड़ों के दर्द का प्रबंधन ठंडी सिकाई से करें",
+        "whatNotToDo": "Do not take aspirin or NSAIDs, avoid dehydration",
+        "whatNotToDoHindi": "एस्पिरिन या NSAIDs न लें, निर्जलीकरण से बचें",
+        "redFlags": "Severe dehydration, persistent high fever, neurological symptoms",
+        "redFlagsHindi": "गंभीर निर्जलीकरण, लगातार तेज बुखार, न्यूरोलॉजिकल लक्षण",
+        "emergencyHelp": "Call 108 if severe symptoms persist or neurological signs appear",
+        "emergencyHelpHindi": "यदि गंभीर लक्षण बने रहें या न्यूरोलॉजिकल संकेत दिखें तो 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "tuberculosis",
+      "name": "Tuberculosis (TB)",
+      "nameHindi": "क्षय रोग (टीबी)",
+      "category": "infectious",
+      "symptoms": [
+        "Persistent cough (3+ weeks)",
+        "Coughing up blood or sputum",
+        "Chest pain",
+        "Fatigue and weakness",
+        "Weight loss",
+        "Night sweats",
+        "Fever and chills"
+      ],
+      "symptomsHindi": [
+        "लगातार खांसी (3+ सप्ताह)",
+        "खून या बलगम के साथ खांसी",
+        "छाती में दर्द",
+        "थकान और कमजोरी",
+        "वजन कम होना",
+        "रात को पसीना",
+        "बुखार और ठंड लगना"
+      ],
+      "prevention": [
+        "Get BCG vaccination",
+        "Avoid close contact with TB patients",
+        "Maintain good ventilation in living spaces",
+        "Cover mouth when coughing",
+        "Complete TB treatment if diagnosed"
+      ],
+      "preventionHindi": [
+        "BCG टीका लगवाएं",
+        "टीबी रोगियों के निकट संपर्क से बचें",
+        "रहने की जगह में अच्छा वेंटिलेशन रखें",
+        "खांसते समय मुंह ढकें",
+        "यदि निदान हो तो टीबी उपचार पूरा करें"
+      ],
+      "treatment": [
+        "Complete 6-month DOTS treatment",
+        "Take all prescribed medications",
+        "Maintain good nutrition",
+        "Rest and avoid stress",
+        "Regular follow-up with doctor"
+      ],
+      "treatmentHindi": [
+        "6 महीने का DOTS उपचार पूरा करें",
+        "सभी निर्धारित दवाएं लें",
+        "अच्छा पोषण बनाए रखें",
+        "आराम करें और तनाव से बचें",
+        "डॉक्टर के साथ नियमित फॉलो-अप"
+      ],
+      "emergency": {
+        "immediateAction": "Seek immediate medical attention for persistent cough with blood",
+        "immediateActionHindi": "खून के साथ लगातार खांसी के लिए तुरंत चिकित्सकीय सहायता लें",
+        "whatNotToDo": "Do not stop TB medication without doctor's advice",
+        "whatNotToDoHindi": "डॉक्टर की सलाह के बिना टीबी की दवा न रोकें",
+        "redFlags": "Coughing up blood, severe chest pain, difficulty breathing",
+        "redFlagsHindi": "खून की उल्टी, गंभीर छाती दर्द, सांस लेने में कठिनाई",
+        "emergencyHelp": "Call 108 or visit nearest hospital immediately",
+        "emergencyHelpHindi": "तुरंत 108 को कॉल करें या निकटतम अस्पताल जाएं"
+      }
+    },
+    {
+      "id": "cholera",
+      "name": "Cholera",
+      "nameHindi": "हैजा",
+      "category": "infectious",
+      "symptoms": [
+        "Severe watery diarrhea",
+        "Vomiting",
+        "Rapid dehydration",
+        "Muscle cramps",
+        "Low blood pressure",
+        "Rapid heart rate",
+        "Sunken eyes and dry mouth"
+      ],
+      "symptomsHindi": [
+        "गंभीर पानी जैसा दस्त",
+        "उल्टी",
+        "तेजी से निर्जलीकरण",
+        "मांसपेशियों में ऐंठन",
+        "निम्न रक्तचाप",
+        "तेजी से दिल की धड़कन",
+        "धंसे हुए आंखें और सूखा मुंह"
+      ],
+      "prevention": [
+        "Drink only boiled or treated water",
+        "Wash hands frequently with soap",
+        "Cook food thoroughly",
+        "Avoid raw vegetables and fruits",
+        "Use proper sanitation facilities"
+      ],
+      "preventionHindi": [
+        "केवल उबला या उपचारित पानी पिएं",
+        "साबुन से हाथ बार-बार धोएं",
+        "भोजन को अच्छी तरह पकाएं",
+        "कच्ची सब्जियां और फलों से बचें",
+        "उचित स्वच्छता सुविधाओं का उपयोग करें"
+      ],
+      "treatment": [
+        "Immediate rehydration with ORS",
+        "Intravenous fluids if severe",
+        "Antibiotics as prescribed",
+        "Continue breastfeeding for infants",
+        "Monitor fluid intake and output"
+      ],
+      "treatmentHindi": [
+        "ORS के साथ तुरंत पुनर्जलीकरण",
+        "यदि गंभीर हो तो IV तरल पदार्थ",
+        "निर्धारित एंटीबायोटिक्स",
+        "शिशुओं के लिए स्तनपान जारी रखें",
+        "तरल पदार्थ के सेवन और उत्सर्जन की निगरानी"
+      ],
+      "emergency": {
+        "immediateAction": "Start ORS immediately and seek medical help for severe dehydration",
+        "immediateActionHindi": "तुरंत ORS शुरू करें और गंभीर निर्जलीकरण के लिए चिकित्सकीय सहायता लें",
+        "whatNotToDo": "Do not give plain water without electrolytes, avoid solid food initially",
+        "whatNotToDoHindi": "इलेक्ट्रोलाइट्स के बिना सादा पानी न दें, शुरुआत में ठोस भोजन से बचें",
+        "redFlags": "Severe dehydration, no urination for 6+ hours, unconsciousness",
+        "redFlagsHindi": "गंभीर निर्जलीकरण, 6+ घंटे तक पेशाब न होना, बेहोशी",
+        "emergencyHelp": "Call 108 immediately for severe cholera cases",
+        "emergencyHelpHindi": "गंभीर हैजा के मामलों के लिए तुरंत 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "typhoid",
+      "name": "Typhoid",
+      "nameHindi": "टाइफाइड",
+      "category": "infectious",
+      "symptoms": [
+        "High fever (103-104°F) for several days",
+        "Headache and body aches",
+        "Weakness and fatigue",
+        "Loss of appetite",
+        "Constipation or diarrhea",
+        "Rose-colored spots on chest and abdomen",
+        "Cough and sore throat"
+      ],
+      "symptomsHindi": [
+        "कई दिनों तक तेज बुखार (103-104°F)",
+        "सिरदर्द और शरीर में दर्द",
+        "कमजोरी और थकान",
+        "भूख न लगना",
+        "कब्ज या दस्त",
+        "छाती और पेट पर गुलाबी रंग के धब्बे",
+        "खांसी और गले में खराश"
+      ],
+      "prevention": [
+        "Get typhoid vaccination",
+        "Drink only boiled or treated water",
+        "Avoid street food and raw vegetables",
+        "Wash hands frequently",
+        "Cook food thoroughly"
+      ],
+      "preventionHindi": [
+        "टाइफाइड का टीका लगवाएं",
+        "केवल उबला या उपचारित पानी पिएं",
+        "स्ट्रीट फूड और कच्ची सब्जियों से बचें",
+        "हाथ बार-बार धोएं",
+        "भोजन को अच्छी तरह पकाएं"
+      ],
+      "treatment": [
+        "Complete course of prescribed antibiotics",
+        "Rest and stay hydrated",
+        "Eat soft, easily digestible foods",
+        "Monitor temperature regularly",
+        "Follow up with doctor"
+      ],
+      "treatmentHindi": [
+        "निर्धारित एंटीबायोटिक्स का पूरा कोर्स लें",
+        "आराम करें और हाइड्रेटेड रहें",
+        "नरम, आसानी से पचने वाला भोजन खाएं",
+        "तापमान की नियमित निगरानी करें",
+        "डॉक्टर के साथ फॉलो-अप करें"
+      ],
+      "emergency": {
+        "immediateAction": "Seek medical attention for persistent high fever and weakness",
+        "immediateActionHindi": "लगातार तेज बुखार और कमजोरी के लिए चिकित्सकीय सहायता लें",
+        "whatNotToDo": "Do not take aspirin, avoid solid foods if severe",
+        "whatNotToDoHindi": "एस्पिरिन न लें, यदि गंभीर हो तो ठोस भोजन से बचें",
+        "redFlags": "Very high fever, severe headache, confusion, abdominal pain",
+        "redFlagsHindi": "बहुत तेज बुखार, गंभीर सिरदर्द, भ्रम, पेट दर्द",
+        "emergencyHelp": "Call 108 if severe symptoms or complications occur",
+        "emergencyHelpHindi": "यदि गंभीर लक्षण या जटिलताएं हों तो 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "hepatitis_a",
+      "name": "Hepatitis A",
+      "nameHindi": "हेपेटाइटिस ए",
+      "category": "infectious",
+      "symptoms": [
+        "Fatigue and weakness",
+        "Nausea and vomiting",
+        "Abdominal pain",
+        "Loss of appetite",
+        "Dark urine",
+        "Pale stools",
+        "Jaundice (yellowing of skin and eyes)",
+        "Fever"
+      ],
+      "symptomsHindi": [
+        "थकान और कमजोरी",
+        "मतली और उल्टी",
+        "पेट दर्द",
+        "भूख न लगना",
+        "गहरा पेशाब",
+        "पीले मल",
+        "पीलिया (त्वचा और आंखों का पीला पड़ना)",
+        "बुखार"
+      ],
+      "prevention": [
+        "Get Hepatitis A vaccination",
+        "Wash hands frequently with soap",
+        "Drink only clean, treated water",
+        "Avoid raw or undercooked shellfish",
+        "Practice good personal hygiene"
+      ],
+      "preventionHindi": [
+        "हेपेटाइटिस ए का टीका लगवाएं",
+        "साबुन से हाथ बार-बार धोएं",
+        "केवल साफ, उपचारित पानी पिएं",
+        "कच्चे या अधपके शेलफिश से बचें",
+        "अच्छी व्यक्तिगत स्वच्छता का अभ्यास करें"
+      ],
+      "treatment": [
+        "Rest and avoid alcohol",
+        "Eat small, frequent meals",
+        "Stay hydrated",
+        "Avoid fatty foods",
+        "Monitor liver function"
+      ],
+      "treatmentHindi": [
+        "आराम करें और शराब से बचें",
+        "छोटे, बार-बार भोजन करें",
+        "हाइड्रेटेड रहें",
+        "वसायुक्त भोजन से बचें",
+        "यकृत कार्य की निगरानी करें"
+      ],
+      "emergency": {
+        "immediateAction": "Rest, avoid alcohol, and seek medical attention for jaundice",
+        "immediateActionHindi": "आराम करें, शराब से बचें और पीलिया के लिए चिकित्सकीय सहायता लें",
+        "whatNotToDo": "Do not drink alcohol, avoid fatty foods",
+        "whatNotToDoHindi": "शराब न पिएं, वसायुक्त भोजन से बचें",
+        "redFlags": "Severe jaundice, confusion, bleeding, severe abdominal pain",
+        "redFlagsHindi": "गंभीर पीलिया, भ्रम, रक्तस्राव, गंभीर पेट दर्द",
+        "emergencyHelp": "Call 108 if severe liver symptoms appear",
+        "emergencyHelpHindi": "यदि गंभीर यकृत लक्षण दिखें तो 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "hypertension",
+      "name": "Hypertension (High BP)",
+      "nameHindi": "उच्च रक्तचाप",
+      "category": "chronic",
+      "symptoms": [
+        "Headaches",
+        "Shortness of breath",
+        "Nosebleeds",
+        "Dizziness",
+        "Chest pain",
+        "Visual changes",
+        "Often no symptoms (silent killer)"
+      ],
+      "symptomsHindi": [
+        "सिरदर्द",
+        "सांस की तकलीफ",
+        "नाक से खून बहना",
+        "चक्कर आना",
+        "छाती में दर्द",
+        "दृष्टि में परिवर्तन",
+        "अक्सर कोई लक्षण नहीं (चुपचाप हमला करने वाला)"
+      ],
+      "prevention": [
+        "Maintain healthy weight",
+        "Exercise regularly",
+        "Reduce salt intake",
+        "Limit alcohol consumption",
+        "Quit smoking",
+        "Manage stress",
+        "Eat balanced diet"
+      ],
+      "preventionHindi": [
+        "स्वस्थ वजन बनाए रखें",
+        "नियमित व्यायाम करें",
+        "नमक का सेवन कम करें",
+        "शराब की मात्रा सीमित करें",
+        "धूम्रपान छोड़ें",
+        "तनाव का प्रबंधन करें",
+        "संतुलित आहार लें"
+      ],
+      "treatment": [
+        "Take prescribed medications regularly",
+        "Monitor blood pressure daily",
+        "Follow DASH diet",
+        "Regular exercise",
+        "Weight management",
+        "Stress reduction techniques"
+      ],
+      "treatmentHindi": [
+        "निर्धारित दवाएं नियमित रूप से लें",
+        "रोजाना रक्तचाप की निगरानी करें",
+        "DASH डाइट का पालन करें",
+        "नियमित व्यायाम",
+        "वजन प्रबंधन",
+        "तनाव कम करने की तकनीकें"
+      ],
+      "emergency": {
+        "immediateAction": "Sit down, rest, and take prescribed medication if available",
+        "immediateActionHindi": "बैठ जाएं, आराम करें और यदि उपलब्ध हो तो निर्धारित दवा लें",
+        "whatNotToDo": "Do not ignore severe headache, chest pain, or vision changes",
+        "whatNotToDoHindi": "गंभीर सिरदर्द, छाती दर्द या दृष्टि परिवर्तन को नजरअंदाज न करें",
+        "redFlags": "Severe headache, chest pain, difficulty breathing, vision loss, confusion",
+        "redFlagsHindi": "गंभीर सिरदर्द, छाती दर्द, सांस लेने में कठिनाई, दृष्टि हानि, भ्रम",
+        "emergencyHelp": "Call 108 immediately for hypertensive crisis",
+        "emergencyHelpHindi": "उच्च रक्तचाप संकट के लिए तुरंत 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "diabetes",
+      "name": "Diabetes",
+      "nameHindi": "मधुमेह",
+      "category": "chronic",
+      "symptoms": [
+        "Frequent urination",
+        "Excessive thirst",
+        "Extreme hunger",
+        "Unexplained weight loss",
+        "Fatigue",
+        "Blurred vision",
+        "Slow-healing sores",
+        "Frequent infections"
+      ],
+      "symptomsHindi": [
+        "बार-बार पेशाब आना",
+        "अत्यधिक प्यास",
+        "अत्यधिक भूख",
+        "अस्पष्टीकृत वजन कम होना",
+        "थकान",
+        "धुंधली दृष्टि",
+        "धीमी गति से ठीक होने वाले घाव",
+        "बार-बार संक्रमण"
+      ],
+      "prevention": [
+        "Maintain healthy weight",
+        "Exercise regularly",
+        "Eat balanced diet",
+        "Limit sugar and refined carbs",
+        "Monitor blood sugar levels",
+        "Get regular check-ups"
+      ],
+      "preventionHindi": [
+        "स्वस्थ वजन बनाए रखें",
+        "नियमित व्यायाम करें",
+        "संतुलित आहार लें",
+        "चीनी और परिष्कृत कार्बोहाइड्रेट सीमित करें",
+        "रक्त शर्करा स्तर की निगरानी करें",
+        "नियमित जांच कराएं"
+      ],
+      "treatment": [
+        "Take prescribed medications/insulin",
+        "Monitor blood sugar regularly",
+        "Follow diabetic diet",
+        "Exercise regularly",
+        "Maintain healthy weight",
+        "Regular medical check-ups"
+      ],
+      "treatmentHindi": [
+        "निर्धारित दवाएं/इंसुलिन लें",
+        "रक्त शर्करा की नियमित निगरानी करें",
+        "मधुमेह आहार का पालन करें",
+        "नियमित व्यायाम करें",
+        "स्वस्थ वजन बनाए रखें",
+        "नियमित चिकित्सकीय जांच"
+      ],
+      "emergency": {
+        "immediateAction": "Check blood sugar, take prescribed medication, and rest",
+        "immediateActionHindi": "रक्त शर्करा जांचें, निर्धारित दवा लें और आराम करें",
+        "whatNotToDo": "Do not ignore very high or very low blood sugar levels",
+        "whatNotToDoHindi": "बहुत अधिक या बहुत कम रक्त शर्करा स्तर को नजरअंदाज न करें",
+        "redFlags": "Very high/low blood sugar, confusion, unconsciousness, severe dehydration",
+        "redFlagsHindi": "बहुत अधिक/कम रक्त शर्करा, भ्रम, बेहोशी, गंभीर निर्जलीकरण",
+        "emergencyHelp": "Call 108 for diabetic emergency",
+        "emergencyHelpHindi": "मधुमेह आपातकाल के लिए 108 को कॉल करें"
+      }
+    },
+    {
+      "id": "asthma",
+      "name": "Asthma",
+      "nameHindi": "दमा",
+      "category": "respiratory",
+      "symptoms": [
+        "Wheezing (whistling sound when breathing)",
+        "Shortness of breath",
+        "Chest tightness",
+        "Coughing, especially at night",
+        "Difficulty breathing",
+        "Rapid breathing"
+      ],
+      "symptomsHindi": [
+        "घरघराहट (सांस लेते समय सीटी की आवाज)",
+        "सांस की तकलीफ",
+        "छाती में जकड़न",
+        "खांसी, विशेषकर रात में",
+        "सांस लेने में कठिनाई",
+        "तेजी से सांस लेना"
+      ],
+      "prevention": [
+        "Identify and avoid triggers",
+        "Use inhaler as prescribed",
+        "Keep living space clean",
+        "Avoid smoke and pollution",
+        "Get flu vaccination",
+        "Manage stress"
+      ],
+      "preventionHindi": [
+        "ट्रिगर्स की पहचान करें और उनसे बचें",
+        "निर्धारित अनुसार इनहेलर का उपयोग करें",
+        "रहने की जगह साफ रखें",
+        "धुएं और प्रदूषण से बचें",
+        "फ्लू का टीका लगवाएं",
+        "तनाव का प्रबंधन करें"
+      ],
+      "treatment": [
+        "Use rescue inhaler during attacks",
+        "Take controller medications regularly",
+        "Avoid known triggers",
+        "Practice breathing exercises",
+        "Keep emergency medication handy",
+        "Regular doctor visits"
+      ],
+      "treatmentHindi": [
+        "दौरे के दौरान रेस्क्यू इनहेलर का उपयोग करें",
+        "नियंत्रक दवाएं नियमित रूप से लें",
+        "ज्ञात ट्रिगर्स से बचें",
+        "सांस लेने के व्यायाम करें",
+        "आपातकालीन दवा हाथ में रखें",
+        "नियमित डॉक्टर की जांच"
+      ],
+      "emergency": {
+        "immediateAction": "Sit upright, use rescue inhaler, stay calm",
+        "immediateActionHindi": "सीधे बैठें, रेस्क्यू इनहेलर का उपयोग करें, शांत रहें",
+        "whatNotToDo": "Do not lie flat, do not ignore worsening symptoms",
+        "whatNotToDoHindi": "सपाट न लेटें, बिगड़ते लक्षणों को नजरअंदाज न करें",
+        "redFlags": "Severe shortness of breath, bluish lips, chest tightness, inability to speak",
+        "redFlagsHindi": "गंभीर सांस की तकलीफ, नीले होंठ, छाती में जकड़न, बोलने में असमर्थता",
+        "emergencyHelp": "Call 108 or go to nearest hospital immediately",
+        "emergencyHelpHindi": "तुरंत 108 को कॉल करें या निकटतम अस्पताल जाएं"
+      }
+    },
+    {
+      "id": "heart_attack",
+      "name": "Heart Attack",
+      "nameHindi": "दिल का दौरा",
+      "category": "emergency",
+      "symptoms": [
+        "Chest pain or pressure",
+        "Pain in arms, neck, jaw, or back",
+        "Shortness of breath",
+        "Nausea and vomiting",
+        "Cold sweat",
+        "Lightheadedness",
+        "Fatigue"
+      ],
+      "symptomsHindi": [
+        "छाती में दर्द या दबाव",
+        "बाहों, गर्दन, जबड़े या पीठ में दर्द",
+        "सांस की तकलीफ",
+        "मतली और उल्टी",
+        "ठंडा पसीना",
+        "चक्कर आना",
+        "थकान"
+      ],
+      "prevention": [
+        "Don't smoke",
+        "Exercise regularly",
+        "Eat heart-healthy diet",
+        "Maintain healthy weight",
+        "Control blood pressure",
+        "Manage diabetes",
+        "Reduce stress"
+      ],
+      "preventionHindi": [
+        "धूम्रपान न करें",
+        "नियमित व्यायाम करें",
+        "दिल के लिए स्वस्थ आहार लें",
+        "स्वस्थ वजन बनाए रखें",
+        "रक्तचाप नियंत्रित करें",
+        "मधुमेह का प्रबंधन करें",
+        "तनाव कम करें"
+      ],
+      "treatment": [
+        "Call emergency services immediately",
+        "Chew aspirin if not allergic",
+        "Stay calm and rest",
+        "Loosen tight clothing",
+        "Do not drive to hospital",
+        "Wait for ambulance"
+      ],
+      "treatmentHindi": [
+        "तुरंत आपातकालीन सेवाओं को कॉल करें",
+        "यदि एलर्जी न हो तो एस्पिरिन चबाएं",
+        "शांत रहें और आराम करें",
+        "तंग कपड़े ढीले करें",
+        "अस्पताल न जाएं",
+        "एम्बुलेंस का इंतजार करें"
+      ],
+      "emergency": {
+        "immediateAction": "Call 108 immediately, chew aspirin if not allergic, stay calm",
+        "immediateActionHindi": "तुरंत 108 को कॉल करें, यदि एलर्जी न हो तो एस्पिरिन चबाएं, शांत रहें",
+        "whatNotToDo": "Do not drive, do not ignore chest pain, do not delay calling emergency",
+        "whatNotToDoHindi": "गाड़ी न चलाएं, छाती दर्द को नजरअंदाज न करें, आपातकाल को कॉल करने में देरी न करें",
+        "redFlags": "Severe chest pain, difficulty breathing, unconsciousness, cold sweat",
+        "redFlagsHindi": "गंभीर छाती दर्द, सांस लेने में कठिनाई, बेहोशी, ठंडा पसीना",
+        "emergencyHelp": "Call 108 immediately - every minute counts",
+        "emergencyHelpHindi": "तुरंत 108 को कॉल करें - हर मिनट मायने रखता है"
+      }
+    },
+    {
+      "id": "snake_bite",
+      "name": "Snake Bite",
+      "nameHindi": "सांप का काटना",
+      "category": "emergency",
+      "symptoms": [
+        "Puncture marks on skin",
+        "Severe pain at bite site",
+        "Swelling and redness",
+        "Nausea and vomiting",
+        "Difficulty breathing",
+        "Blurred vision",
+        "Increased salivation",
+        "Paralysis"
+      ],
+      "symptomsHindi": [
+        "त्वचा पर छेद के निशान",
+        "काटने की जगह पर गंभीर दर्द",
+        "सूजन और लाली",
+        "मतली और उल्टी",
+        "सांस लेने में कठिनाई",
+        "धुंधली दृष्टि",
+        "बढ़ी हुई लार",
+        "पक्षाघात"
+      ],
+      "prevention": [
+        "Wear protective footwear in fields",
+        "Use flashlight at night",
+        "Avoid tall grass and bushes",
+        "Be cautious near water bodies",
+        "Keep surroundings clean",
+        "Do not handle snakes"
+      ],
+      "preventionHindi": [
+        "खेतों में सुरक्षात्मक जूते पहनें",
+        "रात में टॉर्च का उपयोग करें",
+        "ऊंची घास और झाड़ियों से बचें",
+        "जल निकायों के पास सावधान रहें",
+        "आसपास साफ रखें",
+        "सांपों को हाथ न लगाएं"
+      ],
+      "treatment": [
+        "Keep victim calm and still",
+        "Remove tight clothing/jewelry",
+        "Immobilize the bitten limb",
+        "Keep bite site below heart level",
+        "Do not cut, suck, or apply tourniquet",
+        "Transport to hospital immediately"
+      ],
+      "treatmentHindi": [
+        "पीड़ित को शांत और स्थिर रखें",
+        "तंग कपड़े/गहने हटाएं",
+        "काटे गए अंग को स्थिर रखें",
+        "काटने की जगह को दिल के स्तर से नीचे रखें",
+        "काटें, चूसें या टूर्निकेट न लगाएं",
+        "तुरंत अस्पताल ले जाएं"
+      ],
+      "emergency": {
+        "immediateAction": "Keep victim calm, immobilize bitten limb, transport to hospital immediately",
+        "immediateActionHindi": "पीड़ित को शांत रखें, काटे गए अंग को स्थिर रखें, तुरंत अस्पताल ले जाएं",
+        "whatNotToDo": "Do not cut, suck, apply ice, or use tourniquet",
+        "whatNotToDoHindi": "काटें, चूसें, बर्फ लगाएं या टूर्निकेट न लगाएं",
+        "redFlags": "Difficulty breathing, paralysis, severe swelling, unconsciousness",
+        "redFlagsHindi": "सांस लेने में कठिनाई, पक्षाघात, गंभीर सूजन, बेहोशी",
+        "emergencyHelp": "Call 108 immediately - time is critical for snake bite treatment",
+        "emergencyHelpHindi": "तुरंत 108 को कॉल करें - सांप के काटने के उपचार के लिए समय महत्वपूर्ण है"
+      }
+    }
+  ]
+}
