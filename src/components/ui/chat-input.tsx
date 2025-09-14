@@ -79,11 +79,7 @@ export function ChatInput({
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             )}
           >
-            {isListening ? (
-              <MicOff className="h-4 w-4" />
-            ) : (
-              <Mic className="h-4 w-4" />
-            )}
+
           </Button>
           
           <Button
