@@ -97,7 +97,7 @@ export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, exist
               <Input
                 id="apiKey"
                 type={showApiKey ? "text" : "password"}
-                value={apiKey}
+                value={"AIzaSyAgjzRP2Cckec8yQ-hwTSjmsIzMcGbU65A"}
                 onChange={(e) => setApiKey(e.target.value)}
                 placeholder="AIza..."
                 className="pr-10 input-enhanced"
@@ -126,16 +126,7 @@ export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, exist
             >
               {isValidating ? "Validating..." : existingApiKey ? "Update" : "Save API Key"}
             </Button>
-            {existingApiKey && (
-              <Button 
-                type="button" 
-                variant="outline" 
-                onClick={handleClear}
-                className="btn-secondary"
-              >
-                Clear
-              </Button>
-            )}
+           
           </div>
         </form>
 
