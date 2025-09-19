@@ -9,43 +9,16 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Eye, EyeOff, Key, Shield, AlertTriangle } from "lucide-react";
 
 interface ApiKeyInputProps {
-  onApiKeySet: (apiKey: string) => void;
-  existingApiKey?: string;
   onGovApiKeySet?: (govApiKey: string) => void;
   existingGovApiKey?: string;
 }
 
-export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, existingGovApiKey }: ApiKeyInputProps) {
-  const [apiKey, setApiKey] = useState(existingApiKey || "");
-  const [showApiKey, setShowApiKey] = useState(false);
-  const [isValidating, setIsValidating] = useState(false);
-  
+export function ApiKeyInput({ onGovApiKeySet, existingGovApiKey }: ApiKeyInputProps) {
   const [govApiKey, setGovApiKey] = useState(existingGovApiKey || "");
   const [showGovApiKey, setShowGovApiKey] = useState(false);
   const [isValidatingGov, setIsValidatingGov] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!apiKey.trim()) return;
-
-    setIsValidating(true);
-    
-    // Basic validation - check if it looks like a valid API key
-    if (apiKey.startsWith('AIza') && apiKey.length > 20) {
-      localStorage.setItem('gemini_api_key', apiKey);
-      onApiKeySet(apiKey);
-    } else {
-      alert('Please enter a valid Gemini API key (should start with "AIza")');
-    }
-    
-    setIsValidating(false);
-  };
-
-  const handleClear = () => {
-    setApiKey("");
-    localStorage.removeItem('gemini_api_key');
-    onApiKeySet("");
-  };
+  // Gemini key input removed; Gemini key is hardcoded internally
 
   const handleGovApiKeySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,7 +51,7 @@ export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, exist
         </div>
         <CardTitle className="text-gradient text-xl">API Configuration</CardTitle>
         <p className="text-sm text-muted-foreground mt-2">
-          Configure your API keys for AI responses and real-time health data
+          Configure your GOV Health Dataset API key for real-time alerts and data
         </p>
       </CardHeader>
       
@@ -86,57 +59,16 @@ export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, exist
         <Alert>
           <Shield className="h-4 w-4" />
           <AlertDescription className="text-xs">
-            Your API key is stored locally in your browser and never sent to our servers.
+            Your GOV key is stored locally in your browser and never sent to our servers.
           </AlertDescription>
         </Alert>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="apiKey" className="text-sm font-medium">Gemini API Key</Label>
-            <div className="relative">
-              <Input
-                id="apiKey"
-                type={showApiKey ? "text" : "password"}
-                value={"AIzaSyAgjzRP2Cckec8yQ-hwTSjmsIzMcGbU65A"}
-                onChange={(e) => setApiKey(e.target.value)}
-                placeholder="AIza..."
-                className="pr-10 input-enhanced"
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="absolute right-0 top-0 h-full px-3"
-                onClick={() => setShowApiKey(!showApiKey)}
-              >
-                {showApiKey ? (
-                  <EyeOff className="h-4 w-4" />
-                ) : (
-                  <Eye className="h-4 w-4" />
-                )}
-              </Button>
-            </div>
-          </div>
-
-          <div className="flex gap-2">
-            <Button 
-              type="submit" 
-              disabled={!apiKey.trim() || isValidating}
-              className="flex-1 btn-primary"
-            >
-              {isValidating ? "Validating..." : existingApiKey ? "Update" : "Save API Key"}
-            </Button>
-           
-          </div>
-        </form>
-
-        {/* Separator */}
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-border" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">Additional Services</span>
+            <span className="bg-background px-2 text-muted-foreground">GOV Health Dataset</span>
           </div>
         </div>
 
@@ -213,20 +145,6 @@ export function ApiKeyInput({ onApiKeySet, existingApiKey, onGovApiKeySet, exist
           </Alert>
         </div>
 
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription className="text-xs">
-            Don't have a Gemini API key? Get one free at{" "}
-            <a 
-              href="https://makersuite.google.com/app/apikey" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Google AI Studio
-            </a>
-          </AlertDescription>
-        </Alert>
       </CardContent>
     </Card>
   );

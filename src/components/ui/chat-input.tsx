@@ -2,7 +2,8 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Mic, MicOff } from "lucide-react";
+import { Send, Mic, MicOff, AlertCircle } from "lucide-react";
+import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 
 interface ChatInputProps {
   value: string;
@@ -11,6 +12,7 @@ interface ChatInputProps {
   placeholder?: string;
   isLoading?: boolean;
   className?: string;
+  language?: string;
 }
 
 export function ChatInput({
@@ -19,10 +21,39 @@ export function ChatInput({
   onSend,
   placeholder = "Type your health question here...",
   isLoading = false,
-  className
+  className,
+  language = 'en-US'
 }: ChatInputProps) {
-  const [isListening, setIsListening] = React.useState(false);
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+  
+  // Map language codes to speech recognition language codes
+  const getSpeechLanguage = (lang: string): string => {
+    const languageMap: Record<string, string> = {
+      'en': 'en-US',
+      'hi': 'hi-IN',
+      'bn': 'bn-BD',
+      'te': 'te-IN',
+      'mr': 'mr-IN',
+      'ta': 'ta-IN',
+      'gu': 'gu-IN',
+      'kn': 'kn-IN',
+      'pa': 'pa-IN',
+      'ml': 'ml-IN',
+      'or': 'or-IN',
+      'as': 'as-IN',
+    };
+    return languageMap[lang] || 'en-US';
+  };
+
+  const {
+    isListening,
+    transcript,
+    isSupported,
+    error: speechError,
+    startListening,
+    stopListening,
+    resetTranscript
+  } = useSpeechRecognition(getSpeechLanguage(language));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,9 +69,20 @@ export function ChatInput({
     }
   };
 
+  // Update input value when transcript changes
+  React.useEffect(() => {
+    if (transcript) {
+      onChange(transcript);
+    }
+  }, [transcript, onChange]);
+
   const toggleVoiceInput = () => {
-    setIsListening(!isListening);
-    // Voice input functionality would be implemented here
+    if (isListening) {
+      stopListening();
+    } else {
+      resetTranscript();
+      startListening();
+    }
   };
 
   // Auto-resize textarea
@@ -67,20 +109,29 @@ export function ChatInput({
         </div>
         
         <div className="flex gap-2">
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            onClick={toggleVoiceInput}
-            className={cn(
-              "h-10 w-10 p-0 rounded-full transition-smooth",
-              isListening 
-                ? "bg-destructive text-destructive-foreground hover:bg-destructive/90" 
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
-            )}
-          >
-
-          </Button>
+          {isSupported && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={toggleVoiceInput}
+              disabled={isLoading}
+              className={cn(
+                "h-10 w-10 p-0 rounded-full transition-all duration-200",
+                isListening 
+                  ? "bg-red-500 text-white hover:bg-red-600 animate-pulse" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted",
+                isLoading && "opacity-50 cursor-not-allowed"
+              )}
+              title={isListening ? "Stop listening" : "Start voice input"}
+            >
+              {isListening ? (
+                <MicOff className="h-4 w-4" />
+              ) : (
+                <Mic className="h-4 w-4" />
+              )}
+            </Button>
+          )}
           
           <Button
             type="submit"
@@ -93,10 +144,35 @@ export function ChatInput({
         </div>
       </div>
       
-      <div className="mt-2 px-2">
+      <div className="mt-2 px-2 space-y-1">
         <p className="text-xs text-muted-foreground">
           Press Enter to send • Shift + Enter for new line
+          {isSupported && " • Click mic for voice input"}
         </p>
+        
+        {/* Voice input status */}
+        {isListening && (
+          <div className="flex items-center gap-2 text-xs text-red-600 animate-pulse">
+            <Mic className="h-3 w-3" />
+            <span>Listening... Speak now</span>
+          </div>
+        )}
+        
+        {/* Speech recognition error */}
+        {speechError && (
+          <div className="flex items-center gap-2 text-xs text-red-600">
+            <AlertCircle className="h-3 w-3" />
+            <span>{speechError}</span>
+          </div>
+        )}
+        
+        {/* Browser support notice */}
+        {!isSupported && (
+          <div className="flex items-center gap-2 text-xs text-amber-600">
+            <AlertCircle className="h-3 w-3" />
+            <span>Voice input not supported in this browser</span>
+          </div>
+        )}
       </div>
     </form>
   );

@@ -30,10 +30,47 @@ export interface ChatBubbleProps
   message: string;
   timestamp?: string;
   avatar?: React.ReactNode;
+  language?: string;
 }
 
 const ChatBubble = React.forwardRef<HTMLDivElement, ChatBubbleProps>(
-  ({ className, variant, size, message, timestamp, avatar, ...props }, ref) => {
+  ({ className, variant, size, message, timestamp, avatar, language, ...props }, ref) => {
+    const getLanguageFlag = (lang?: string) => {
+      const languageMap: Record<string, string> = {
+        'en': '🇺🇸',
+        'hi': '🇮🇳',
+        'bn': '🇧🇩',
+        'te': '🇮🇳',
+        'mr': '🇮🇳',
+        'ta': '🇮🇳',
+        'gu': '🇮🇳',
+        'kn': '🇮🇳',
+        'pa': '🇮🇳',
+        'ml': '🇮🇳',
+        'or': '🇮🇳',
+        'as': '🇮🇳',
+      };
+      return languageMap[lang || 'en'] || '🇺🇸';
+    };
+
+    const getLanguageName = (lang?: string) => {
+      const languageMap: Record<string, string> = {
+        'en': 'EN',
+        'hi': 'HI',
+        'bn': 'BN',
+        'te': 'TE',
+        'mr': 'MR',
+        'ta': 'TA',
+        'gu': 'GU',
+        'kn': 'KN',
+        'pa': 'PA',
+        'ml': 'ML',
+        'or': 'OR',
+        'as': 'AS',
+      };
+      return languageMap[lang || 'en'] || 'EN';
+    };
+
     return (
       <div
         className={cn(
@@ -52,14 +89,22 @@ const ChatBubble = React.forwardRef<HTMLDivElement, ChatBubbleProps>(
           <div className={cn(chatBubbleVariants({ variant, size }), className)}>
             {message}
           </div>
-          {timestamp && (
-            <span className={cn(
-              "text-xs text-muted-foreground px-2",
-              variant === "user" ? "text-right" : "text-left"
-            )}>
-              {timestamp}
-            </span>
-          )}
+          <div className={cn(
+            "flex items-center gap-2 px-2",
+            variant === "user" ? "justify-end" : "justify-start"
+          )}>
+            {timestamp && (
+              <span className="text-xs text-muted-foreground">
+                {timestamp}
+              </span>
+            )}
+            {language && language !== 'en' && (
+              <span className="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded-full flex items-center gap-1">
+                <span className="text-[10px]">{getLanguageFlag(language)}</span>
+                <span className="font-medium">{getLanguageName(language)}</span>
+              </span>
+            )}
+          </div>
         </div>
       </div>
     );
