@@ -1,5 +1,1 @@
-cd my-project
-git status
-git add .
-git commit -m "Added user authentication feature"
-git push origin main
+
