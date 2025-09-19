@@ -21,7 +21,7 @@ interface MedicineContext {
 }
 
 // Internal Gemini API key (hardcoded as requested)
-const INTERNAL_GEMINI_API_KEY = "AIzaSyBb94kq6fhDeYkaWordYZyC1reHq2xV7Vk";
+const INTERNAL_GEMINI_API_KEY = "AIzaSyDKIHfu6mNsZtc8xdfB8uvZkilIvl0eLhI";
 
 const getLanguageName = (code: string): string => {
   const languageMap: Record<string, string> = {
